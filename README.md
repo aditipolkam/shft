@@ -1,5 +1,10 @@
 # shft
 
+[![Crates.io](https://img.shields.io/crates/v/shft.svg)](https://crates.io/crates/shft)
+[![CI](https://github.com/aditipolkam/shft/actions/workflows/ci.yml/badge.svg)](https://github.com/aditipolkam/shft/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE-MIT)
+[![MSRV](https://img.shields.io/badge/MSRV-1.88-orange.svg)](Cargo.toml)
+
 `shft` is a fast, offline image converter and optimizer for your terminal. It is a single native Rust binary with safe output naming, deterministic presets, bounded parallelism, and no calls to network services or external media tools. It can also turn HEIC/HEIF photos into ordinary PNG, JPEG, or WebP files without requiring `libheif`, ImageMagick, or FFmpeg.
 
 Turn a folder of oversized PNGs into web-ready images with:
