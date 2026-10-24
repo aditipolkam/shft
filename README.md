@@ -10,14 +10,21 @@ shft ./assets --web
 
 ## Install
 
-Build from source with stable Rust:
+Install from [crates.io](https://crates.io/crates/shft) with Rust 1.88 or newer:
 
 ```bash
+cargo install shft
+```
+
+Or build from source:
+
+```bash
+git clone https://github.com/aditipolkam/shft
 cd shft
 cargo install --path .
 ```
 
-Or build a local release binary with `cargo build --release`. The executable is written to `target/release/shft`.
+`cargo build --release` writes a local binary to `target/release/shft`.
 
 ## Quick start
 
@@ -109,7 +116,7 @@ JSON mode disables colors and progress output and includes per-file results and 
 
 PNG and WebP preserve alpha. JPEG does not: converting a genuinely transparent image to JPEG fails unless a background is supplied, for example `--background '#ffffff'`. EXIF orientation is applied to pixels before transforms so stripping metadata cannot rotate the visible result.
 
-The current encoders write clean image payloads and therefore discard ancillary metadata. `--strip-metadata` makes that policy explicit and is enabled by optimization presets. `--keep-metadata` is accepted for forward compatibility, but metadata preservation is limited by the built-in codec APIs in v1.
+The current encoders write clean image payloads and therefore discard ancillary metadata. `--strip-metadata` makes that policy explicit and is enabled by optimization presets. `--keep-metadata` is accepted for forward compatibility, but metadata preservation is limited by the built-in codec APIs in the current release.
 
 ## Supported formats and limitations
 
@@ -126,12 +133,10 @@ HEVC may be covered by patents in some jurisdictions. The bundled decoder is per
 
 Run `shft --help` for all options.
 
-## Development
+## Contributing
 
-```bash
-cargo fmt --check
-cargo clippy --all-targets --all-features -- -D warnings
-cargo test
-```
+Bug reports, feature requests and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup and the checks CI runs, and [SECURITY.md](SECURITY.md) for reporting vulnerabilities privately.
 
-Licensed under MIT.
+## License
+
+Licensed under the [MIT license](LICENSE-MIT).

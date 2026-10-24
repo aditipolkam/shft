@@ -1,0 +1,38 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output
+      description: The exact command you ran and its full output.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: image
+    attributes:
+      label: Input image
+      description: Attach the image if you can, or describe its format, dimensions and whether it has transparency.
+  - type: input
+    id: version
+    attributes:
+      label: shft version
+      description: Output of `shft --version`.
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: e.g. macOS 15.1, Ubuntu 24.04, Windows 11
+    validations:
+      required: true
